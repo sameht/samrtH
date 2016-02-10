@@ -21,7 +21,7 @@ var appContext=angular.module('starter', ['ionic'])
       StatusBar.styleDefault();
     }
 
-    
+
   });
 })
 
@@ -63,7 +63,7 @@ var appContext=angular.module('starter', ['ionic'])
         }
       }
     })
-   
+
 
     .state('appMenu.setting', {
       url: "/setting",
@@ -75,15 +75,10 @@ var appContext=angular.module('starter', ['ionic'])
         }
       }
     })
-    
+
      .state('appMenu.tabs', {
       url: "/tab",
       abstract: true,
-      views: {
-        'menuContent': {
-          templateUrl: "template/tabs.html"
-        }
-      }
     })
 
      .state('appMenu.doctorLocator', {

@@ -1,3 +1,6 @@
+/**
+* side-menu
+*/
 .menu-animated {
   -webkit-transition: 500ms !important;
   transition: 500ms !important;
@@ -25,7 +28,21 @@
 .side-menu[side="right"] h1.title {
   left: auto;
 }
+/**
+* header
+*/
+.s-dropdown-btn{
+  background-color: #387EF5;
+}
+.s-dropdown-menu{
+  position: fixed;
+  right: 2% !important;
+  left: inherit;
+}
 
+/**
+* login template
+*/
 .form-signin
 {
     max-width: 330px;
@@ -96,14 +113,8 @@
 {
     margin-top: 10px;
 }
-.new-account
-{
-    display: block;
-    margin-top: 10px;
-}
 
-
-/* dactor locator*/
+/* doctor locator*/
 .tab-sameh {
     opacity: 1;
     transform: translate3d(0%, 50px, 0px);
