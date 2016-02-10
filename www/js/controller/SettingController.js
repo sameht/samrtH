@@ -1,0 +1,3 @@
+appContext.controller('SettingController', function(){
+	
+})
