@@ -1,0 +1,101 @@
+<ion-view view-title="Localisation">
+<ion-tabs class="tabs-top tabs-icon-top">
+    <!-- filtre basique -->
+    <ion-tab title="Filtre basique" icon="ion-search">
+        <i></i>
+        <ion-content style="background-color:#EAEDEE">
+            <div class="container need-help">
+
+                <!-- adresse -->
+                <div class="row">
+
+                    <div class="col-xs-10">
+                        <input class="form-control s-float-left input-lg" type="text" placeholder="adresse" />
+                    </div>
+                    <div class="col-xs-2">
+                        <button class="button button-positive  s-float-right btn-lg"> <span class="glyphicon ion-qr-scanner" ></span></button>
+                    </div>
+
+                </div>
+
+                <!-- distance -->
+                <div class="row">
+
+                    <div class="col-xs-5 s-margin-top">
+                        <label>Distance: </label>
+                    </div>
+
+                    <div class="col-xs-5 col-offset-2 s-margin-top">
+                        <input type="text" class="form-control s-float-left" placeholder="en Km" />
+                    </div>
+
+                </div>
+
+                <!-- chercher -->
+                <div class="button-bar s-margin-top ">
+                    <button class="button button-positive">
+                        chercher
+                    </button>
+                </div>
+
+                <!-- résultat : liste / Map -->
+                <div class="row s-margin-top ">
+                    <div class=" col-xs-6 text-center ">
+                        <label ng-click="click=false">Resultats: </label> <!--initialement click=false -->
+                    </div>
+                    <div class="col-xs-6  text-center">
+                        <label ng-click="click=true">Map: </label>
+                    </div>
+                </div>
+                <div class="row s-no-margin-hor">
+                    <div class=" col-xs-6 text-center ">
+                        <div class="s-underlined-block"></div>
+                    </div>
+                    <div class="col-xs-6  text-center">
+                        <div class="s-underlined-block"></div>
+                    </div>
+                </div>
+
+                <!-- résultat liste  -->
+                <div class="row  s-margin-top s-no-margin-hor" ng-hide="click" >
+                    <div class="col-xs-12 ">
+
+                        <ion-list>
+                            <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="doctor in doctorArray" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
+                                <img ng-src="img/ionic.png">
+                                <h2>{{doctor.name }}</h2>
+                                <p> {{doctor.address }}</p>
+                                <i class="icon ion-chevron-right icon-accessory"></i>
+
+                                <ion-option-button class="button-assertive" ng-click="remove(chat)">
+                                    Delete
+                                </ion-option-button>
+                            </ion-item>
+                        </ion-list>
+                    </div>
+
+                </div>
+
+                <!-- résultat: map -->
+                 <div class="row  s-margin-top s-no-margin-hor  " ng-show="click">
+                    <div class="col-xs-12">
+                        Map
+                        <div id="map"  data-tap-disabled="true"></div>
+                    </div>
+                </div>
+
+
+        </ion-content>
+
+    </ion-tab>
+
+
+    <!-- filtre par localisation -->
+    <ion-tab title="Filtre" icon="ion-android-funnel">
+        <i></i>
+        <ion-content>
+            here goes your code for tab two
+        </ion-content>
+    </ion-tab>
+</ion-tabs>
+</ion-view>

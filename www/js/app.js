@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-var appContext=angular.module('starter', ['ionic'])
+var appContext=angular.module('starter', ['ionic','ngCordova'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function( $scope) {
@@ -86,8 +86,19 @@ var appContext=angular.module('starter', ['ionic'])
       cache : false,
       views: {
         'menuContent': {
-          templateUrl: "template/doctorLocator.html",
+          templateUrl: "template/doctor-locator.html",
           controller : 'DoctorLocatorController'
+        }
+      }
+    })
+
+ .state('appMenu.pharmacyLocator', {
+      url: "/pharmacyLocator",
+      cache : false,
+      views: {
+        'menuContent': {
+          templateUrl: "template/pharmacy-locator.html",
+          controller : 'PharmacyLocatorController'
         }
       }
     })

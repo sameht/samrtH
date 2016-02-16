@@ -1,8 +1,17 @@
 <ion-view view-title="Paramètre">
     <ion-content>
+            	<label class="s-margin-top">Notifications:</label>
         <div class="list">
-            <ion-checkbox ng-model="isChecked1">Me rappeler à l'heure exacte</ion-checkbox>
-            <ion-checkbox ng-model="isChecked2">Checkbox Label</ion-checkbox>      
+
+            <ion-toggle ng-model="uncomingRDV" toggle-class="toggle-calm"> rendez-vous annulé</ion-toggle>
+            <ion-toggle ng-model="comingRDV" toggle-class="toggle-calm"> rendez-vous à venir
+
+		<div  class="list" ng-show="comingRDV">
+            	<ion-radio ng-model="choice" ng-value="'A'">Choose A</ion-radio>
+  				<ion-radio ng-model="choice" ng-value="'B'">Choose B</ion-radio>
+            </div>
+        </ion-toggle>
+            
         </div>
     </ion-content>
 </ion-view>

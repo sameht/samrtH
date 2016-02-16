@@ -19,3 +19,19 @@ appContext.controller('AppMenuController', function($state, $ionicPopover, $scop
 
 	
 })
+/*
+
+js/ 	
+	controller/
+	service/
+	template/
+
+app/
+	login/
+		LoginController.js
+		LoginFactory.js
+		LoginDirective.js
+		LoginFiltre.js
+		templates/
+			login.html
+*/

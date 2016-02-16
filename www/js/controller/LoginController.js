@@ -1,17 +1,30 @@
-appContext.controller('LoginController', function($scope, $ionicLoading, $state) {
+appContext.controller('LoginController', function($scope, $ionicLoading, $state, $cordovaToast) {
 
 
     $scope.signin = function(user) {
         console.log(user)
         if (!user) {
 
-            $ionicLoading.show({
+            if (window.cordova) {
+
+                 $cordovaToast
+                .show('Here is a message', 'short', 'bottom')
+                .then(function(success) {
+                  // success
+                }, function (error) {
+                  // error
+                });
+            } else{
+
+                 $ionicLoading.show({
                 template: 'Veuillez remplir tout les champs'
             });
 
             setTimeout(function() {
                 $ionicLoading.hide()
             }, 1700);
+            };
+           
 
         } else if (!user.password || user.password =="undefined") {
             $ionicLoading.show({

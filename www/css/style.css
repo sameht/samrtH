@@ -115,7 +115,33 @@
 }
 
 /* doctor locator*/
-.tab-sameh {
-    opacity: 1;
-    transform: translate3d(0%, 50px, 0px);
+.s-margin-top{
+   margin-top: 15px !important;
+}
+
+.s-no-margin-hor{
+   margin-left: 0 !important;
+   margin-right: 0 !important;
+}
+.s-float-left{
+  float:left;
+}
+.s-float-right{
+  float:rigth;
+}
+
+.s-underlined-block{
+  background-color: #387EF5;
+  height: 5px;
+}
+/**
+* side-menu
+*/
+.scroll {
+    height: 100%;
+}
+ 
+#map {
+    width: 100%;
+    height: 100%;
 }
