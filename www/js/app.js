@@ -103,6 +103,17 @@ var appContext=angular.module('starter', ['ionic','ngCordova'])
       }
     })
 
+ .state('appMenu.consultation', {
+      url: "/consultation",
+      cache : false,
+      views: {
+        'menuContent': {
+          templateUrl: "template/consultation.html",
+          controller : 'ConsultationController'
+        }
+      }
+    })
+
 
 
 

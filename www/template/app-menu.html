@@ -41,10 +41,10 @@
         <ion-content>
             <ul class="list">
                 <!-- Note each link has the 'menu-close' attribute so the menu auto closes when clicking on one of these links -->
-                <a href="" class="item" menu-close ui-sref="appMenu.home">
-                    <span class="glyphicon glyphicon-home" aria-hidden="true"></span>  Home</a>
+                <a href="" class="item  " menu-close ui-sref="appMenu.home">
+                   <span class="glyphicon glyphicon-home" aria-hidden="true"></span>  Home</a>
 
-                <a href="" class="item" menu-close>
+                <a ui-sref="appMenu.consultation" class="item" menu-close>
                     <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>  Liste des consultations</a>
 
                 <a href="" class="item" menu-close>
@@ -55,7 +55,8 @@
 
                 <a ui-sref="appMenu.pharmacyLocator" class="item" menu-close>
                     <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>  Localisation de pharmacie</a>
-                <a href="" class="item" menu-close>Compte</a>
+                <a href="" class="item  " menu-close>
+                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>  Compte</a>
             </ul>
         </ion-content>
     </ion-side-menu>

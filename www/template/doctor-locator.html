@@ -49,10 +49,10 @@
                 </div>
                 <div class="row s-no-margin-hor">
                     <div class=" col-xs-6 text-center ">
-                        <div class="s-underlined-block"></div>
+                        <div class="s-underlined-block" ng-hide="click"></div>
                     </div>
                     <div class="col-xs-6  text-center">
-                        <div class="s-underlined-block"></div>
+                        <div class="s-underlined-block" ng-show="click"></div>
                     </div>
                 </div>
 
@@ -77,10 +77,9 @@
                 </div>
 
                 <!-- résultat: map -->
-                 <div class="row  s-margin-top s-no-margin-hor  " ng-show="click">
+                 <div class="row  s-margin-top s-no-margin-hor  ">
                     <div class="col-xs-12">
-                        Map
-                        <div id="map"  data-tap-disabled="true"></div>
+                        <div id="map" style="height:17em" data-tap-disabled="true" ></div>
                     </div>
                 </div>
 
